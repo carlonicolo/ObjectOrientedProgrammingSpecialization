@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+#include <vector>
+
+using namespace std;
 
 void printMenu()
 {
@@ -92,16 +95,38 @@ void processUserOption(int userOption)
 
 int main()
 {
+    enum class OrderBookType{bid, ask};
+
+    /*
     double price = 5319.450228;
     double amount = 0.00020075;
     std::string timestamp{"2020/03/17 17:01:24.884492"};
     std::string product{"BTC/USDT"};
     std::string orderType{"anything"};
-
-    enum class OrderBookType{bid, ask};
     OrderBookType orderType = OrderBookType::bid;
+    */
 
+    // vectors
+    std::vector<double> prices;
+    vector<double> amounts;
+    vector<string> timestamps;
+    vector<string> products;
+    vector<OrderBookType> orderTypes;
 
+    prices.push_back(5000.01);
+    amounts.push_back(0.001);
+    timestamps.push_back("2020/03/17 17:01:24.884492");
+    products.push_back("BTC/USDT");
+    orderTypes.push_back(OrderBookType::bid);
+
+    prices.push_back(100.01);
+    amounts.push_back(0.001);
+    timestamps.push_back("2020/03/17 17:01:24.884492");
+    products.push_back("BTC/USDT");
+    orderTypes.push_back(OrderBookType::bid);
+
+    cout << "prices: " << prices[0] << endl;
+    cout << "prices: " << prices[1] << endl;
 
     while (true)
     {
