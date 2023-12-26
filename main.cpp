@@ -177,12 +177,6 @@ int main()
     return 0;
     */
 
-    OrderBookEntry order1{1000,
-                          0.02,
-                          "2020/03/17 17:01:24.884492",
-                          "BTC/USDT",
-                          OrderBookType::bid};
-
     /*
     order1.price = 100000;
     order1.amount = 0.002;
@@ -191,5 +185,40 @@ int main()
     order1.orderType = OrderBookType::bid;
     */
 
-    cout << "The price is " << order1.price << endl;
+    //cout << "The price is " << order1.price << endl;
+
+    vector<OrderBookEntry> orders;
+
+    /*
+    OrderBookEntry order1{1000,
+                          0.02,
+                          "2020/03/17 17:01:24.884492",
+                          "BTC/USDT",
+                          OrderBookType::bid};
+
+    OrderBookEntry order2{3000,
+                          0.02,
+                          "2020/03/17 17:01:24.884492",
+                          "BTC/USDT",
+                          OrderBookType::bid};
+
+    orders.push_back(order1);
+    orders.push_back(order2);
+    */
+
+    orders.push_back(OrderBookEntry{1000,
+                                    0.02,
+                                    "2020/03/17 17:01:24.884492",
+                                    "BTC/USDT",
+                                    OrderBookType::bid});
+
+    orders.push_back(OrderBookEntry{3000,
+                                    0.02,
+                                    "2020/03/17 17:01:24.884492",
+                                    "BTC/USDT",
+                                    OrderBookType::bid});
+    
+    cout << "The price is " << orders[1].price << endl;
+
+    
 }
