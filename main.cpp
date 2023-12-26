@@ -4,6 +4,22 @@
 
 using namespace std;
 
+enum class OrderBookType
+{
+    bid,
+    ask
+};
+
+class OrderBookEntry
+{
+public:
+    double price;
+    double amount;
+    string timestamp;
+    string product;
+    OrderBookType orderType;
+};
+
 void printMenu()
 {
     // 1 print help
@@ -95,7 +111,6 @@ void processUserOption(int userOption)
 
 int main()
 {
-    enum class OrderBookType{bid, ask};
 
     /*
     double price = 5319.450228;
@@ -107,6 +122,7 @@ int main()
     */
 
     // vectors
+    /*
     std::vector<double> prices;
     vector<double> amounts;
     vector<string> timestamps;
@@ -127,7 +143,9 @@ int main()
 
     cout << "prices: " << prices[0] << endl;
     cout << "prices: " << prices[1] << endl;
+    */
 
+    /*
     while (true)
     {
         printMenu();
@@ -137,4 +155,16 @@ int main()
     }
 
     return 0;
+    */
+
+    OrderBookEntry order1;
+
+    order1.price = 100000;
+    order1.amount = 0.002;
+    order1.timestamp = "2020/03/17 17:01:24.884492";
+    order1.product = "BTC/USDT";
+    order1.orderType = OrderBookType::bid;
+
+    cout << "The price is " << order1.price << endl;
+
 }
