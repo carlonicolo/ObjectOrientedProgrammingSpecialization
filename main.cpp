@@ -1,15 +1,20 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "OrderBookEntry.h"
 
 using namespace std;
 
+/*
 enum class OrderBookType
 {
     bid,
     ask
 };
 
+*/
+
+/*
 class OrderBookEntry
 {
 public:
@@ -23,15 +28,6 @@ public:
           timestamp(_timestamp),
           product(_product),
           orderType(_orderType)
-    {
-        /*
-        this->price = _price;
-        this->amount = _amount;
-        this->timestamp = _timestamp;
-        this->product = _product;
-        this->orderType = _orderType;
-        */
-    }
 
     double price;
     double amount;
@@ -39,6 +35,7 @@ public:
     string product;
     OrderBookType orderType;
 };
+*/
 
 void printMenu()
 {
