@@ -1,3 +1,5 @@
+#pragma once // include this file once
+
 #include <iostream>
 #include <string>
 #include <vector>
