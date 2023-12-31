@@ -11,7 +11,8 @@ using namespace std;
 int main()
 {
     MerkelMain app{};
-    app.printMenu();
+    app.init();
+    //app.printMenu();
 }
     /*
     double price = 5319.450228;
